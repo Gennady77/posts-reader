@@ -1,0 +1,42 @@
+.PostPage {
+  margin: 0 auto;
+  width: 960px;
+  height: 100%;
+
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.PostPage__header {
+  height: var(--header-height);
+  line-height: var(--header-height);
+  flex: none;
+}
+
+.PostPage__headerPosts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PostPage__body {
+  overflow: auto;
+  flex: auto;
+  padding-right: 5px;
+}
+
+.PostPage__leftColumn {
+  width: var(--left-column-width);
+  flex: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.PostPage__rightColumn {
+  flex: auto;
+
+  display: flex;
+  flex-direction: column;
+}

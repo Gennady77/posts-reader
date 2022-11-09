@@ -1,0 +1,12 @@
+.List {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.List__placeholder {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 5em;
+}

@@ -1,0 +1,24 @@
+.PostAuthorListItem {
+  background-color: var(--primary-background-color);
+  border: var(--primary-border);
+  height: 50px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.PostAuthorListItem--selected {
+  background-color: var(--color-white);
+}
+
+.PostAuthorListItem__count {
+  background-color: #999;
+  text-align: center;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}

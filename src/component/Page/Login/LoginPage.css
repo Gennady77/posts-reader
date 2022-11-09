@@ -1,0 +1,88 @@
+.LoginPage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary-background-color);
+}
+
+.LoginPage__formHeader {
+  font-size: 3em;
+}
+
+.LoginPage__form {
+  width: 700px;
+  height: 500px;
+
+  box-shadow: 0 0 15px -5px #000;
+  background-color: #fff;
+
+  padding: 4em 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LoginPage__formInput {
+  font-size: 1.5em;
+  line-height: 2em;
+  width: 500px;
+  border: var(--primary-border);
+}
+
+.LoginPage__formLabelBoxError .LoginPage__formInput {
+  color: var(--color-error);
+  border: var(--error-border);
+}
+
+.LoginPage__formLabel {
+  font-size: 1.5em;
+}
+
+.LoginPage__footer {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.LoginPage__button {
+  font-size: 1.3em;
+  width: 70px;
+  border: var(--primary-border);
+  background-color: var(--primary-background-color);
+}
+
+.LoginPage__button:active {
+  opacity: .8;
+}
+
+.LoginPage__formBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.LoginPage__formInputError {
+  color: red;
+  font-size: .8em;
+  position: absolute;
+  left: 0;
+  bottom: -1.4em;
+}
+
+.LoginPage__formLabelBox {
+  position: relative;
+}
+
+.LoginPage__errorMessage {
+  color: red;
+  font-weight: bold;
+}

@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { LoginPage } from './component/Page/Login/LoginPage';
+import { PostPage } from './component/Page/Post/PostPage';
+import { PrivateRoute } from './component/PrivateRoute/PrivateRoute';
+import { AuthContextProvider } from './component/Contexts/AuthContext/AuthContext';
+import { PostsContextProvider } from './component/Contexts/PostsContext/PostsContext';
+import { ErrorPage } from './component/Page/Error/ErrorPage';
 
 function App() {
+  window.onunhandledrejection = event => {
+    console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason.message}`);
+    event.preventDefault();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AuthContextProvider>
+        <PostsContextProvider>
+
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/error" element={<ErrorPage />} />
+              <Route path="/:fromId" element={
+                <PrivateRoute>
+                  <PostPage />
+                </PrivateRoute>
+              } />
+              <Route path="/" element={
+                <PrivateRoute>
+                  <PostPage />
+                </PrivateRoute>
+              } />
+            </Routes>
+
+        </PostsContextProvider>
+      </AuthContextProvider>
+    </BrowserRouter>
   );
 }
 

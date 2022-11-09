@@ -1,0 +1,15 @@
+.PostListItem {
+  border: var(--secondary-border);
+  background-color: var(--secondary-background-color);
+}
+
+.PostListItem__header {
+  line-height: 2em;
+  padding: 0 10px;
+  height: 2em;
+  border-bottom: var(--secondary-border);
+}
+
+.PostListItem__body {
+  padding: 10px;
+}

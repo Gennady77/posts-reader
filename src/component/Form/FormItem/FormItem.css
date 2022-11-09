@@ -1,0 +1,27 @@
+.FormItem {
+  position: relative;
+}
+
+.FormItem__label {
+  font-size: 1.5em;
+}
+
+.FormItem__input {
+  font-size: 1.5em;
+  line-height: 2em;
+  width: 500px;
+  border: var(--primary-border);
+}
+
+.FormItem--error .FormItem__input {
+  color: var(--color-error);
+  border: var(--error-border);
+}
+
+.FormItem__inputError {
+  color: red;
+  font-size: .8em;
+  position: absolute;
+  left: 0;
+  bottom: -1.4em;
+}
